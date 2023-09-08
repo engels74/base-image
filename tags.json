@@ -1,0 +1,12 @@
+{
+  "focal": {
+    "description": "Ubuntu 20.04",
+    "last_updated": "2023-09-08T05:43:27.398Z",
+    "latest": false,
+    "tags": [
+      "focal",
+      "focal-20230904220611",
+      "focal-6490457"
+    ]
+  }
+}
