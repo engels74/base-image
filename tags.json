@@ -1,4 +1,14 @@
 {
+  "alpine": {
+    "description": "Alpine 3.18",
+    "last_updated": "2023-09-08T05:58:39.713Z",
+    "latest": false,
+    "tags": [
+      "alpine",
+      "alpine-20230904220610",
+      "alpine-47eb1b4"
+    ]
+  },
   "focal": {
     "description": "Ubuntu 20.04",
     "last_updated": "2023-09-08T05:43:27.398Z",
