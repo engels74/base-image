@@ -8,5 +8,15 @@
       "focal-20230904220611",
       "focal-6490457"
     ]
+  },
+  "jammy": {
+    "description": "Ubuntu 22.04",
+    "last_updated": "2023-09-08T05:49:49.186Z",
+    "latest": false,
+    "tags": [
+      "jammy",
+      "jammy-20230904220612",
+      "jammy-cac74aa"
+    ]
   }
 }
