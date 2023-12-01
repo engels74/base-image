@@ -1,12 +1,12 @@
 {
   "alpine": {
     "description": "Alpine 3.18",
-    "last_updated": "2023-09-28T23:17:47.622Z",
+    "last_updated": "2023-12-01T00:56:39.145Z",
     "latest": false,
     "tags": [
       "alpine",
-      "alpine-20230928230908",
-      "alpine-3a52d77"
+      "alpine-20231201005035",
+      "alpine-11c651c"
     ]
   },
   "focal": {
