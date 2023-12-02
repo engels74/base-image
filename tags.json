@@ -21,12 +21,12 @@
   },
   "jammy": {
     "description": "Ubuntu 22.04",
-    "last_updated": "2023-12-02T02:22:43.201Z",
+    "last_updated": "2023-12-02T05:12:53.510Z",
     "latest": false,
     "tags": [
       "jammy",
-      "jammy-20231202021846",
-      "jammy-508a1c9"
+      "jammy-20231202050857",
+      "jammy-4dec6e9"
     ]
   }
 }
