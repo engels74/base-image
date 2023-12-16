@@ -11,12 +11,12 @@
   },
   "focal": {
     "description": "Ubuntu 20.04",
-    "last_updated": "2023-12-16T08:17:09.204Z",
+    "last_updated": "2023-12-16T10:12:53.672Z",
     "latest": false,
     "tags": [
       "focal",
-      "focal-20231216081125",
-      "focal-898b604"
+      "focal-20231216100916",
+      "focal-47a5aa3"
     ]
   },
   "jammy": {
