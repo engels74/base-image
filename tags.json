@@ -9,6 +9,16 @@
       "alpine-75285d9"
     ]
   },
+  "alpinevpn": {
+    "description": "Alpine 3.18",
+    "last_updated": "2024-01-23T08:24:56.346Z",
+    "latest": false,
+    "tags": [
+      "alpinevpn",
+      "alpinevpn-20240123081839",
+      "alpinevpn-06bec09"
+    ]
+  },
   "focal": {
     "description": "Ubuntu 20.04",
     "last_updated": "2023-12-16T10:12:53.672Z",
