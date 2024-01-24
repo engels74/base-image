@@ -1,14 +1,4 @@
 {
-  "alpine": {
-    "description": "Alpine 3.18",
-    "last_updated": "2024-01-07T05:30:05.388Z",
-    "latest": false,
-    "tags": [
-      "alpine",
-      "alpine-20240107052151",
-      "alpine-75285d9"
-    ]
-  },
   "alpinevpn": {
     "description": "Alpine 3.18",
     "last_updated": "2024-01-23T08:53:03.788Z",
@@ -17,26 +7,6 @@
       "alpinevpn",
       "alpinevpn-20240123085057",
       "alpinevpn-3e1d535"
-    ]
-  },
-  "focal": {
-    "description": "Ubuntu 20.04",
-    "last_updated": "2023-12-16T10:12:53.672Z",
-    "latest": false,
-    "tags": [
-      "focal",
-      "focal-20231216100916",
-      "focal-47a5aa3"
-    ]
-  },
-  "jammy": {
-    "description": "Ubuntu 22.04",
-    "last_updated": "2024-01-23T11:26:08.899Z",
-    "latest": false,
-    "tags": [
-      "jammy",
-      "jammy-20240123112053",
-      "jammy-6f2cb63"
     ]
   },
   "jammyvpn": {
