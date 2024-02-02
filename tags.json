@@ -11,12 +11,12 @@
   },
   "jammyvpn": {
     "description": "Ubuntu 22.04",
-    "last_updated": "2024-02-02T20:48:02.320Z",
+    "last_updated": "2024-02-02T20:56:08.533Z",
     "latest": false,
     "tags": [
       "jammyvpn",
-      "jammyvpn-20240202204400",
-      "jammyvpn-976b876"
+      "jammyvpn-20240202205137",
+      "jammyvpn-87ac795"
     ]
   }
 }
