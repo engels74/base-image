@@ -21,12 +21,12 @@
   },
   "vpntest": {
     "description": "Alpine 3.18",
-    "last_updated": "2024-02-02T17:34:57.568Z",
+    "last_updated": "2024-02-02T17:40:44.179Z",
     "latest": false,
     "tags": [
       "vpntest",
-      "vpntest-20240202172640",
-      "vpntest-c0e6323"
+      "vpntest-20240202173807",
+      "vpntest-de070ae"
     ]
   }
 }
