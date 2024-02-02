@@ -18,5 +18,15 @@
       "jammyvpn-20240202163704",
       "jammyvpn-3685cd0"
     ]
+  },
+  "vpntest": {
+    "description": "Alpine 3.18",
+    "last_updated": "2024-02-02T17:34:57.568Z",
+    "latest": false,
+    "tags": [
+      "vpntest",
+      "vpntest-20240202172640",
+      "vpntest-c0e6323"
+    ]
   }
 }
