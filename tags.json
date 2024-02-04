@@ -1,12 +1,12 @@
 {
   "alpinevpn": {
     "description": "Alpine 3.18",
-    "last_updated": "2024-02-04T20:13:11.361Z",
+    "last_updated": "2024-02-04T20:26:09.757Z",
     "latest": false,
     "tags": [
       "alpinevpn",
-      "alpinevpn-20240204201055",
-      "alpinevpn-4ec2150"
+      "alpinevpn-20240204202007",
+      "alpinevpn-2dde7d6"
     ]
   },
   "jammyvpn": {
