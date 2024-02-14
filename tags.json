@@ -22,17 +22,5 @@
       "jammyvpn-3.1.6.2--e956c57",
       "jammyvpn-8c2a6d7"
     ]
-  },
-  "piadip": {
-    "description": "Alpine 3.18",
-    "hide": false,
-    "last_updated": "2024-02-14T09:47:39.000Z",
-    "last_updated_url": "https://github.com/hotio/base/actions/runs/7899287065",
-    "latest": false,
-    "tags": [
-      "piadip",
-      "piadip-3.1.6.2--e956c57",
-      "piadip-5264f76"
-    ]
   }
 }
