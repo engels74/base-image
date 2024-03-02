@@ -22,5 +22,17 @@
       "jammyvpn-3.1.6.2",
       "jammyvpn-068c191"
     ]
+  },
+  "mangle": {
+    "description": "Alpine 3.18",
+    "hide": false,
+    "last_updated": "2024-03-02T13:22:29.000Z",
+    "last_updated_url": "https://github.com/hotio/base/actions/runs/8123057610",
+    "latest": false,
+    "tags": [
+      "mangle",
+      "mangle-3.1.6.2",
+      "mangle-fe3d2f0"
+    ]
   }
 }
