@@ -11,6 +11,18 @@
       "alpinevpn-3426c04"
     ]
   },
+  "alpinevpn318": {
+    "description": "Alpine 3.18",
+    "hide": false,
+    "last_updated": "2024-03-03T13:36:22.000Z",
+    "last_updated_url": "https://github.com/hotio/base/actions/runs/8130578702",
+    "latest": false,
+    "tags": [
+      "alpinevpn318",
+      "alpinevpn318-3.1.6.2",
+      "alpinevpn318-29053d1"
+    ]
+  },
   "alpinevpn319": {
     "description": "Alpine 3.19",
     "hide": false,
