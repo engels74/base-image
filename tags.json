@@ -14,13 +14,13 @@
   "jammyvpn": {
     "description": "Ubuntu 22.04",
     "hide": false,
-    "last_updated": "2024-04-22T07:09:28.000Z",
-    "last_updated_url": "https://github.com/hotio/base/actions/runs/8779839812",
+    "last_updated": "2024-04-23T04:32:01.000Z",
+    "last_updated_url": "https://github.com/hotio/base/actions/runs/8794824972",
     "latest": false,
     "tags": [
       "jammyvpn",
       "jammyvpn-3.1.6.2",
-      "jammyvpn-a298f1f"
+      "jammyvpn-2e0c0e7"
     ]
   }
 }
