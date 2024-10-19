@@ -20,10 +20,10 @@ latest_revision=$(curl -fsL --max-time 10 "https://raw.githubusercontent.com/${r
 revision_status=$(curl -fsL --max-time 10 "https://api.github.com/repos/${repo}/compare/${latest_revision}...${revision}" | jq -r 'if (.behind_by | length) != 0 then "(\(.status), by \(.behind_by))" else empty end')
 
 echo -ne "
-$(figlet "hotio")
+$(figlet "engels74")
 Donate:        https://hotio.dev/donate
-Documentation: https://hotio.dev$(jq -r 'if .app != "" then "/containers/\(.app)" else empty end' <<< "$(base64 --decode <<< "${IMAGE_STATS}")")
-Support:       https://hotio.dev/discord
+Documentation: https://engels74.net$(jq -r 'if .app != "" then "/containers/\(.app)" else empty end' <<< "$(base64 --decode <<< "${IMAGE_STATS}")")
+Support:       https://github.com/engels74$(jq -r 'if .app != "" then "/\(.app)/issues" else empty end' <<< "$(base64 --decode <<< "${IMAGE_STATS}")")
 Image:         ${image}
 Revision:      ${revision} ${revision_status}
 Version:       $(jq -r '.version' <<< "$(base64 --decode <<< "${IMAGE_STATS}")")
