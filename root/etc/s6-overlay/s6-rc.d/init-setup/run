@@ -21,7 +21,7 @@ revision_status=$(curl -fsL --max-time 10 "https://api.github.com/repos/${repo}/
 
 echo -ne "
 $(figlet "engels74")
-Donate:        https://hotio.dev/donate
+Donate:        https://engels74.net/donate
 Documentation: https://engels74.net$(jq -r 'if .app != "" then "/containers/\(.app)" else empty end' <<< "$(base64 --decode <<< "${IMAGE_STATS}")")
 Support:       https://github.com/engels74$(jq -r 'if .app != "" then "/\(.app)/issues" else empty end' <<< "$(base64 --decode <<< "${IMAGE_STATS}")")
 Image:         ${image}
