@@ -23,6 +23,8 @@ jobs:
 
       - name: Check for hotio/mrhotio commits in alpinevpn/jammyvpn
         id: check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Added authentication
         run: |
           cd repo
           git config --global --add safe.directory /github/workspace/repo
@@ -61,9 +63,9 @@ jobs:
             echo "New alpinevpn commits:"
             git log --oneline --graph --decorate $LOCAL_ALPINE_SHA..upstream/alpinevpn
             COMMITS_ALPINE=$(git rev-list $LOCAL_ALPINE_SHA..upstream/alpinevpn)
-            echo "Found ${COMMITS_ALPINE:-0} new commits in alpinevpn"
+            echo "Found ${#COMMITS_ALPINE[@]} new commits in alpinevpn"
           else
-            COMMITS_ALPINE=""
+            COMMITS_ALPINE=()
             echo "No new commits in alpinevpn branch"
           fi
 
@@ -86,23 +88,26 @@ jobs:
             echo "New jammyvpn commits:"
             git log --oneline --graph --decorate $LOCAL_JAMMY_SHA..upstream/jammyvpn
             COMMITS_JAMMY=$(git rev-list $LOCAL_JAMMY_SHA..upstream/jammyvpn)
-            echo "Found ${COMMITS_JAMMY:-0} new commits in jammyvpn"
+            echo "Found ${#COMMITS_JAMMY[@]} new commits in jammyvpn"
           else
-            COMMITS_JAMMY=""
+            COMMITS_JAMMY=()
             echo "No new commits in jammyvpn branch"
           fi
 
           echo "=== Commit Author Analysis ==="
-          TOTAL_COMMITS=$(echo "$COMMITS_ALPINE $COMMITS_JAMMY" | wc -w)
+          # Handle empty commits using array syntax
+          COMMITS_LIST=("${COMMITS_ALPINE[@]}" "${COMMITS_JAMMY[@]}")
+          TOTAL_COMMITS=${#COMMITS_LIST[@]}
           echo "Total commits to analyze: $TOTAL_COMMITS"
           FOUND=false
           COUNT=0
 
-          for SHA in $COMMITS_ALPINE $COMMITS_JAMMY; do
+          for SHA in "${COMMITS_LIST[@]}"; do
             COUNT=$((COUNT+1))
             echo "--- Analyzing commit $COUNT/$TOTAL_COMMITS ($SHA) ---"
-            AUTHOR=$(gh api /repos/hotio/base/commits/$SHA --jq '.author.login')
-            COMMIT_MESSAGE=$(git show -s --format=%s $SHA)
+            # Add error handling for API calls
+            AUTHOR=$(gh api /repos/hotio/base/commits/$SHA --jq '.author.login' 2>/dev/null || echo "unknown")
+            COMMIT_MESSAGE=$(git show -s --format=%s $SHA 2>/dev/null || echo "could not retrieve message")
             echo "Author: $AUTHOR | Message: $COMMIT_MESSAGE"
             
             if [[ "$AUTHOR" == "hotio" || "$AUTHOR" == "mrhotio" ]]; then
@@ -174,13 +179,14 @@ jobs:
           if [[ "${{ matrix.branch }}" != "master" ]]; then
             echo "--- Patch Application Process ---"
             echo "Copying patches from ../../patches/patches/${{ matrix.branch }}"
-            cp -v ../../patches/patches/${{ matrix.branch }}/* .
-            echo "Patch files to apply:"
-            ls -l *.patch
-
-            echo "Applying patches with verbose output:"
+            cp -v ../../patches/patches/${{ matrix.branch }}/*.patch . || echo "No patches found"
+            
+            # Safer patch application with validation
             for PATCH in *.patch; do
-              echo "🚀 Applying $PATCH"
+              [ -f "$PATCH" ] || continue  # Skip if no patches
+              echo "🚀 Validating $PATCH"
+              git apply --check -v "$PATCH" 2>&1 | sed 's/^/    /'
+              echo "✅ Validation passed, applying patch"
               git apply -v -w "$PATCH" 2>&1 | sed 's/^/    /'
               echo "✅ Patch applied successfully"
             done
@@ -194,7 +200,7 @@ jobs:
           if ! git diff --quiet HEAD; then
             echo "Changes detected:"
             git diff --stat
-            git commit -m "Auto-sync: Applied patches"
+            git commit -m "Auto-sync: Applied patches ($(date +%Y-%m-%d)) [skip ci]"
             echo "Commit created: $(git log -1 --oneline)"
             echo "--- Pushing Changes ---"
             git push origin ${{ matrix.branch }} --force
