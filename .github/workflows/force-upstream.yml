@@ -1,0 +1,51 @@
+name: Force Sync Upstream
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        branch: [master, alpinevpn, jammyvpn]
+    steps:
+      - name: Checkout patches branch
+        uses: actions/checkout@v4
+        with:
+          ref: patches
+          path: patches
+
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.branch }}
+          path: target
+
+      - name: Sync and Apply
+        run: |
+          cd target
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Reset to upstream
+          git remote add upstream https://github.com/hotio/base.git
+          git fetch upstream
+          git reset --hard upstream/${{ matrix.branch }}
+          
+          # Apply patches
+          cp -r ../patches/patches/${{ matrix.branch }}/* .
+          git apply *.patch
+          rm -f *.patch
+          
+          # Commit if changes
+          git add .
+          if ! git diff --quiet HEAD; then
+            git commit -m "Auto-sync: Applied patches [skip ci]"
+            git push origin ${{ matrix.branch }} --force
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
