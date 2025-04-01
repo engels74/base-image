@@ -2,13 +2,13 @@
   "alpinevpn": {
     "description": "Alpine 3.21",
     "hide": false,
-    "last_updated": "2025-03-31T22:33:26.000Z",
-    "last_updated_url": "https://github.com/hotio/base/actions/runs/14182658805",
+    "last_updated": "2025-04-01T02:00:58.000Z",
+    "last_updated_url": "https://github.com/hotio/base/actions/runs/14185414027",
     "latest": false,
     "tags": [
       "alpinevpn",
       "alpinevpn-3.2.0.2",
-      "alpinevpn-80194e2"
+      "alpinevpn-419725e"
     ]
   },
   "jammyvpn": {
