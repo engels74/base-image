@@ -21,9 +21,9 @@ revision_status=$(curl -fsL --max-time 10 "https://api.github.com/repos/${repo}/
 
 echo -ne "
 $(figlet "hotio")
-Donate:        https://hotio.dev/donate
-Documentation: https://hotio.dev$(jq -r 'if .app != "" then "/containers/\(.app)" else empty end' <<< "$(base64 --decode <<< "${IMAGE_STATS}")")
-Support:       https://hotio.dev/discord
+Donate:        https://engels74.net/donate
+Documentation: https://engels74.net$(jq -r 'if .app != "" then "/containers/\(.app)" else empty end' <<< "$(base64 --decode <<< "${IMAGE_STATS}")")
+Support:       https://github.com/engels74$(jq -r 'if .app != "" then "/\(.app)/issues" else empty end' <<< "$(base64 --decode <<< "${IMAGE_STATS}")")
 Image:         ${image}
 Revision:      ${revision} ${revision_status}
 Version:       $(jq -r '.version' <<< "$(base64 --decode <<< "${IMAGE_STATS}")")
