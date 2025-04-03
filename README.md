@@ -1,15 +1,47 @@
-# Documentation
+# Base Image (engels74)
 
-All our documentation is located at [hotio.dev](https://hotio.dev).
+<p align="center">
+  <img src="https://i.imgur.com/kp7wxBg.png" alt="base-image" style="width: 50%;"/>
+</p>
 
-# Support
+<p align="center">
+  <a href="https://github.com/engels74/base-image/blob/master/LICENSE"><img src="https://img.shields.io/badge/License%20(Image)-GPL--3.0-orange" alt="License (Image)"></a>
+  <a href="https://hub.docker.com/r/engels74/base-image"><img src="https://img.shields.io/docker/pulls/engels74/base-image.svg" alt="Docker Pulls"></a>
+  <a href="https://github.com/engels74/base-image/stargazers"><img src="https://img.shields.io/github/stars/engels74/base-image.svg" alt="GitHub Stars"></a>
+</p>
 
-If you need some assistance, please join our [discord](https://hotio.dev/discord) server.
+## 📖 Documentation
 
-# Source
+All the documentation for the "base image" is located here.
 
-The source is hosted at [GitHub](https://github.com/hotio). If you can't find it in the `master` branch, it's probably located in another branch.
+For more information about the Docker image itself, you can visit [engels74.net](https://engels74.net/containers/base-image).
 
-# Show your support
+## 🐋 Docker Image
 
-You can show your support by giving us a star on Docker Hub or/and GitHub, it's also possible to make a [donation](https://hotio.dev/donate).
+### Docker Compose
+
+To get started with qbittorrent using Docker, follow these steps:
+
+1. **Use this Docker Compose example**
+    ```yaml
+	services:
+	  base-image:
+	    container_name: base-image
+	    image: ghcr.io/engels74/base-image:alpinevpn
+	    environment:
+	      - PUID=1000
+	      - PGID=1000
+	      - UMASK=002
+	      - TZ=Etc/UTC
+	    volumes:
+	      - /<host_folder_config>:/config
+    ```
+
+2. **Run the Docker container using `docker compose`:**
+    ```sh
+    docker compose -f /choose/path/to/docker-compose.base-image.yml up -d
+    ```
+
+## 📜 License
+
+The Docker image is licensed under the GPLv3 License. See the [LICENSE](https://github.com/engels74/base-image/blob/master/LICENSE) file for details.
