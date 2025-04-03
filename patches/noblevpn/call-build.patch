@@ -1,0 +1,9 @@
+--- a/.github/workflows/call-build.yml
++++ b/.github/workflows/call-build.yml
+@@ -8,5 +8,5 @@
+ 
+ jobs:
+   call:
+-    uses: hotio/build-workflow/.github/workflows/build-on-call.yml@master
++    uses: engels74/docker-build-workflow/.github/workflows/build-on-call.yml@master
+     secrets: inherit
