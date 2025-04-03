@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        branch: [master, alpinevpn, jammyvpn]
+        branch: [master, alpinevpn, jammyvpn, noblevpn]
     steps:
       - name: Checkout patches branch
         uses: actions/checkout@v4
@@ -30,17 +30,17 @@ jobs:
           cd target
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          
+
           # Reset to upstream
           git remote add upstream https://github.com/hotio/base.git
           git fetch upstream
           git reset --hard upstream/${{ matrix.branch }}
-          
+
           # Apply patches
           cp -r ../patches/patches/${{ matrix.branch }}/* .
           git apply *.patch
           rm -f *.patch
-          
+
           # Commit if changes
           git add .
           if ! git diff --quiet HEAD; then
