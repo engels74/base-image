@@ -2,13 +2,13 @@
   "alpinevpn": {
     "description": "Alpine 3.21",
     "hide": false,
-    "last_updated": "2025-04-04T15:19:32.000Z",
-    "last_updated_url": "https://github.com/engels74/base-image/actions/runs/14268586651",
+    "last_updated": "2025-04-16T12:18:29.000Z",
+    "last_updated_url": "https://github.com/engels74/base-image/actions/runs/14492471436",
     "latest": false,
     "tags": [
       "alpinevpn",
       "alpinevpn-3.2.0.2",
-      "alpinevpn-77aff92"
+      "alpinevpn-37d7acd"
     ]
   },
   "jammyvpn": {
