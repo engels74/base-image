@@ -14,13 +14,13 @@
   "jammyvpn": {
     "description": "Ubuntu 22.04",
     "hide": false,
-    "last_updated": "2025-04-16T21:14:45.000Z",
-    "last_updated_url": "https://github.com/engels74/base-image/actions/runs/14502651436",
+    "last_updated": "2025-04-17T10:15:38.000Z",
+    "last_updated_url": "https://github.com/engels74/base-image/actions/runs/14513311218",
     "latest": false,
     "tags": [
       "jammyvpn",
       "jammyvpn-3.2.0.2",
-      "jammyvpn-0972a8a"
+      "jammyvpn-b16c745"
     ]
   },
   "noblevpn": {
