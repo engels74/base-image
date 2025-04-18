@@ -11,18 +11,6 @@
       "alpinevpn-9039de6"
     ]
   },
-  "jammyvpn": {
-    "description": "Ubuntu 22.04",
-    "hide": false,
-    "last_updated": "2025-04-17T19:49:26.000Z",
-    "last_updated_url": "https://github.com/engels74/base-image/actions/runs/14523572733",
-    "latest": false,
-    "tags": [
-      "jammyvpn",
-      "jammyvpn-3.2.0.2",
-      "jammyvpn-7ab325d"
-    ]
-  },
   "noblevpn": {
     "description": "Ubuntu 24.04",
     "hide": false,
