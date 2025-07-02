@@ -14,13 +14,13 @@
   "noblevpn": {
     "description": "Ubuntu 24.04",
     "hide": false,
-    "last_updated": "2025-06-06T11:04:20.000Z",
-    "last_updated_url": "https://github.com/engels74/base-image/actions/runs/15488735904",
+    "last_updated": "2025-07-02T05:26:14.000Z",
+    "last_updated_url": "https://github.com/engels74/base-image/actions/runs/16016680318",
     "latest": false,
     "tags": [
       "noblevpn",
       "noblevpn-3.2.1.0",
-      "noblevpn-a36f5d1"
+      "noblevpn-9d809d5"
     ]
   }
 }
