@@ -1,7 +1,7 @@
 # Base Image (engels74)
 
 <p align="center">
-  <img src="https://i.imgur.com/kp7wxBg.png" alt="base-image" style="width: 50%;"/>
+  <img src="https://engels74.net/img/image-logos/base-image.svg" alt="base-image" style="width: 30%;"/>
 </p>
 
 <p align="center">
