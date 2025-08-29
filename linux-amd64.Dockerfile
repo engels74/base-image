@@ -59,4 +59,9 @@ RUN mkdir "${APP_DIR}" && \
 # install root-files
 ARG VERSION_ROOT_FILES
 RUN curl -fsSL "https://github.com/hotio/root-files/archive/${VERSION_ROOT_FILES}.tar.gz" | tar zpxf - -C / "root-files-${VERSION_ROOT_FILES}/root" --strip-components=2 && \
-    chmod +x /etc/s6-overlay/init-hook
+    chmod +x /etc/s6-overlay/init-hook && \
+    sed -i '/figlet/ s/hotio/engels74/; \
+            /Donate:/ s|https://hotio.dev/donate|https://engels74.net/donate|; \
+            /Documentation:/ s|https://hotio.dev|https://engels74.net|; \
+            /Support:/ s|https://hotio.dev/discord|https://github.com/engels74/$(jq -r '".app"' <<< "$(base64 --decode <<< "${IMAGE_STATS}")")\/issues|' \
+        /etc/s6-overlay/s6-rc.d/init-setup/run
