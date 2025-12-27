@@ -2,13 +2,13 @@
   "alpinevpn": {
     "description": "Alpine 3.22",
     "hide": false,
-    "last_updated": "2025-12-26T09:17:49.000Z",
-    "last_updated_url": "https://github.com/engels74/base-image/actions/runs/20519853422",
+    "last_updated": "2025-12-27T12:44:19.000Z",
+    "last_updated_url": "https://github.com/engels74/base-image/actions/runs/20539118722",
     "latest": false,
     "tags": [
       "alpinevpn",
       "alpinevpn-3.2.1.0",
-      "alpinevpn-fe2203b"
+      "alpinevpn-3ca1936"
     ]
   },
   "noblevpn": {
