@@ -27,10 +27,10 @@ ${disclaimer_text}
 fi
 
 echo -ne "
-$(figlet "hotio")
-Donate:        https://hotio.dev/donate
-Documentation: https://hotio.dev${app_uri}
-Support:       https://hotio.dev/discord
+$(figlet "engels74")
+Donate:        https://engels74.net/donate
+Documentation: https://engels74.net${app_uri}
+Support:       https://github.com/engels74/$(jq -r '.app' <<< "${IMAGE_STATS}")/issues
 Image:         ${image}
 Revision:      ${revision}
 Version:       ${version}
