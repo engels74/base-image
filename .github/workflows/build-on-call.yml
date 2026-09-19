@@ -169,7 +169,7 @@ jobs:
             smoketest.log
 
   publish:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     strategy:
       matrix:
         registry: [ghcr.io]
@@ -239,7 +239,7 @@ jobs:
             done < manifest.list
 
   packages:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs: [build, publish]
     steps:
       - name: Checkout
@@ -266,7 +266,7 @@ jobs:
             fi
 
   tags:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs: [build, publish, packages]
     steps:
       - name: Update tags
@@ -363,7 +363,7 @@ jobs:
             fi
 
   notify:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     if: always()
     needs: [build, publish, packages, tags]
     steps:
